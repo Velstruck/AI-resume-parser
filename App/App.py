@@ -405,13 +405,13 @@ def run():
                     resume_score = resume_score+6
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Objective/Summary</h4>''',unsafe_allow_html=True)                
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add your career objective, it will give your career intension to the Recruiters.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add your career objective, it will give your career intension to the Recruiters.</h4>''',unsafe_allow_html=True)
 
                 if 'Education' or 'School' or 'College'  in resume_text:
                     resume_score = resume_score + 12
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Education Details</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Education. It will give Your Qualification level to the recruiter</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Education. It will give Your Qualification level to the recruiter</h4>''',unsafe_allow_html=True)
 
                 if 'EXPERIENCE' in resume_text:
                     resume_score = resume_score + 16
@@ -420,7 +420,7 @@ def run():
                     resume_score = resume_score + 16
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Experience</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Experience. It will help you to stand out from crowd</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Experience. It will help you to stand out from crowd</h4>''',unsafe_allow_html=True)
 
                 if 'INTERNSHIPS'  in resume_text:
                     resume_score = resume_score + 6
@@ -435,7 +435,7 @@ def run():
                     resume_score = resume_score + 6
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Internships</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Internships. It will help you to stand out from crowd</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Internships. It will help you to stand out from crowd</h4>''',unsafe_allow_html=True)
 
                 if 'SKILLS'  in resume_text:
                     resume_score = resume_score + 7
@@ -450,7 +450,7 @@ def run():
                     resume_score = resume_score + 7
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added Skills</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Skills. It will help you a lot</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Skills. It will help you a lot</h4>''',unsafe_allow_html=True)
 
                 if 'HOBBIES' in resume_text:
                     resume_score = resume_score + 4
@@ -459,7 +459,7 @@ def run():
                     resume_score = resume_score + 4
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added your Hobbies</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Hobbies. It will show your personality to the Recruiters and give the assurance that you are fit for this role or not.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Hobbies. It will show your personality to the Recruiters and give the assurance that you are fit for this role or not.</h4>''',unsafe_allow_html=True)
 
                 if 'INTERESTS'in resume_text:
                     resume_score = resume_score + 5
@@ -468,7 +468,7 @@ def run():
                     resume_score = resume_score + 5
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added your Interest</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Interest. It will show your interest other that job.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Interest. It will show your interest other that job.</h4>''',unsafe_allow_html=True)
 
                 if 'ACHIEVEMENTS' in resume_text:
                     resume_score = resume_score + 13
@@ -477,7 +477,7 @@ def run():
                     resume_score = resume_score + 13
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added your Achievements </h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Achievements. It will show that you are capable for the required position.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Achievements. It will show that you are capable for the required position.</h4>''',unsafe_allow_html=True)
 
                 if 'CERTIFICATIONS' in resume_text:
                     resume_score = resume_score + 12
@@ -489,7 +489,7 @@ def run():
                     resume_score = resume_score + 12
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added your Certifications </h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Certifications. It will show that you have done some specialization for the required position.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Certifications. It will show that you have done some specialization for the required position.</h4>''',unsafe_allow_html=True)
 
                 if 'PROJECTS' in resume_text:
                     resume_score = resume_score + 19
@@ -504,7 +504,7 @@ def run():
                     resume_score = resume_score + 19
                     st.markdown('''<h5 style='text-align: left; color: #1ed760;'>[+] Awesome! You have added your Projects</h4>''',unsafe_allow_html=True)
                 else:
-                    st.markdown('''<h5 style='text-align: left; color: #000000;'>[-] Please add Projects. It will show that you have done work related the required position or not.</h4>''',unsafe_allow_html=True)
+                    st.markdown('''<h5 style='text-align: left; color: #d71e1e;'>[-] Please add Projects. It will show that you have done work related the required position or not.</h4>''',unsafe_allow_html=True)
 
                 st.subheader("**Resume Score 📝**")
                 
