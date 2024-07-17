@@ -1,8 +1,5 @@
-# Developed by dnoobnerd [https://dnoobnerd.netlify.app]    Made with Streamlit
 
-
-###### Packages Used ######
-import streamlit as st # core package used in this project
+import streamlit as st 
 import pandas as pd
 import base64, random
 import time,datetime
@@ -13,10 +10,9 @@ import platform
 import geocoder
 import secrets
 import io,random
-import plotly.express as px # to create visualisations at the admin session
+import plotly.express as px
 import plotly.graph_objects as go
 from geopy.geocoders import Nominatim
-# libraries used to parse the pdf files
 from pyresparser import ResumeParser
 from pdfminer3.layout import LAParams, LTTextBox
 from pdfminer3.pdfpage import PDFPage
@@ -25,25 +21,18 @@ from pdfminer3.pdfinterp import PDFPageInterpreter
 from pdfminer3.converter import TextConverter
 from streamlit_tags import st_tags
 from PIL import Image
-# pre stored data for prediction purposes
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
 import nltk
 nltk.download('stopwords')
 
 
-###### Preprocessing functions ######
-
-
-# Generates a link allowing the data in a given panda dataframe to be downloaded in csv format 
 def get_csv_download_link(df,filename,text):
     csv = df.to_csv(index=False)
-    ## bytes conversions
     b64 = base64.b64encode(csv.encode()).decode()      
     href = f'<a href="data:file/csv;base64,{b64}" download="{filename}">{text}</a>'
     return href
 
 
-# Reads Pdf file and check_extractable
 def pdf_reader(file):
     resource_manager = PDFResourceManager()
     fake_file_handle = io.StringIO()
@@ -57,13 +46,12 @@ def pdf_reader(file):
             print(page)
         text = fake_file_handle.getvalue()
 
-    ## close open handles
+    
     converter.close()
     fake_file_handle.close()
     return text
 
 
-# show uploaded file path to view pdf_display
 def show_pdf(file_path):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
@@ -71,12 +59,12 @@ def show_pdf(file_path):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 
-# course recommendations which has data already loaded from Courses.py
+
 def course_recommender(course_list):
     st.subheader("**Courses & Certificates Recommendations 👨‍🎓**")
     c = 0
     rec_course = []
-    ## slider to choose from range 1-10
+   
     no_of_reco = st.slider('Choose Number of Course Recommendations:', 1, 10, 5)
     random.shuffle(course_list)
     for c_name, c_link in course_list:
@@ -87,8 +75,6 @@ def course_recommender(course_list):
             break
     return rec_course
 
-
-###### Database Stuffs ######
 
 
 # sql connector
@@ -198,9 +184,9 @@ def run():
     if choice == 'User':
         
         # Collecting Miscellaneous Information
-        act_name = st.text_input('Name*')
-        act_mail = st.text_input('Mail*')
-        act_mob  = st.text_input('Mobile Number*')
+        act_name = st.text_input('Name')
+        act_mail = st.text_input('Mail')
+        act_mob  = st.text_input('Mobile Number')
         sec_token = secrets.token_urlsafe(12)
         host_name = socket.gethostname()
         ip_add = socket.gethostbyname(host_name)
@@ -220,7 +206,7 @@ def run():
 
 
         # Upload Resume
-        st.markdown('''<h5 style='text-align: left; color: #00FF00;'> Upload Your Resume, And Get Smart Recommendations</h5>''',unsafe_allow_html=True)
+        st.markdown('''<h5 style='text-align: left; color: #ff0000;'> Upload Your Resume, And Get Smart Recommendations</h5>''',unsafe_allow_html=True)
         
         ## file upload in pdf format
         pdf_file = st.file_uploader("", type=["pdf"])
